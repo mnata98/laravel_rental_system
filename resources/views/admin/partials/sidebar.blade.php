@@ -49,23 +49,23 @@
                       </a>
                   </li>
 
-                  {{-- Properties --}}
+                  {{-- Cars --}}
                   <li class="nav-item">
-                      <a href="/properties"
-                          class="nav-link {{(Route::current()->getName()) == 'properties' ? 'active' : ''}}">
-                          <i class="nav-icon fas fa-building"></i>
+                      <a href="/cars"
+                          class="nav-link {{(Route::current()->getName()) == 'cars.index' ? 'active' : ''}}">
+                          <i class="nav-icon fas fa-car"></i>
                           <p>
-                              Properties
+                              Cars
                           </p>
                       </a>
                   </li>
 
-                  {{-- Leases --}}
+                  {{-- Rentals --}}
                   <li class="nav-item">
-                      <a href="/leases" class="nav-link {{(Route::current()->getName()) == 'leases' ? 'active' : ''}}">
-                          <i class="nav-icon fas fa-building"></i>
+                      <a href="/rentals" class="nav-link {{(Route::current()->getName()) == 'rentals.index' ? 'active' : ''}}">
+                          <i class="nav-icon fas fa-key"></i>
                           <p>
-                              Leases
+                              Rentals
                           </p>
                       </a>
                   </li>

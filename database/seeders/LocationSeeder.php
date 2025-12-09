@@ -15,10 +15,11 @@ class LocationSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('locations')->insert(
-            ['locations' => 'Abbottabad'],
-            ['locations' => 'Adilpur'],
-            ['locations' => 'Ahmedpur'],
-            ['locations' => 'Ahmadpur Sial']);
+        DB::table('locations')->insert([
+            ['location' => 'Abbottabad'],
+            ['location' => 'Adilpur'],
+            ['location' => 'Ahmedpur'],
+            ['location' => 'Ahmadpur Sial']
+        ]);
     }
 }

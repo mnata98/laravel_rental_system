@@ -13,16 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('leases', function (Blueprint $table) {
-            $table->id('lid');
-            $table->integer('eid');
-            $table->integer('pid');
-            $table->string('duration');
-            $table->date('lease_start');
-            $table->date('lease_expire');
-            $table->integer('rent');
-            $table->longText('description');
-            
+        Schema::create('customers', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('ic_number')->unique();
+            $table->string('license_number')->unique();
+            $table->string('phone');
+            $table->json('documents')->nullable(); // Store paths to uploaded files
             $table->timestamps();
         });
     }
@@ -34,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('leases');
+        Schema::dropIfExists('customers');
     }
 };
